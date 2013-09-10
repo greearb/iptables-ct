@@ -24,7 +24,9 @@
 #endif
 
 #if !defined(__GLIBC__) || (__GLIBC__ < 2)
+#if !defined(__ANDROID__)
 typedef unsigned int socklen_t;
+#endif
 #endif
 
 #include "libiptc/libip6tc.h"

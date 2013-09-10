@@ -13,6 +13,19 @@
 #	define TCPOPT_MD5SIG 19
 #endif
 
+/* Android needs this */
+#ifndef  TCPOPT_MAXSEG
+# define TCPOPT_MAXSEG		2
+# define TCPOPT_WINDOW		3
+# define TCPOLEN_WINDOW		3
+# define TCPOPT_SACK_PERMITTED	4		/* Experimental */
+# define TCPOLEN_SACK_PERMITTED	2
+# define TCPOPT_SACK		5		/* Experimental */
+# define TCPOPT_TIMESTAMP	8
+# define TCPOLEN_TIMESTAMP	10
+# define TCPOLEN_TSTAMP_APPA	(TCPOLEN_TIMESTAMP+2) /* appendix A */
+#endif
+
 enum {
 	O_STRIP_OPTION = 0,
 };
