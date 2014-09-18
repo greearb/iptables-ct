@@ -234,6 +234,10 @@ struct pprot {
 /* ARPTABLES SPECIFIC NEW FUNCTIONS ADDED HERE */
 /***********************************************/
 
+#ifdef __ANDROID__
+#define ETH_ALEN 6
+#endif
+
 unsigned char mac_type_unicast[ETH_ALEN] =   {0,0,0,0,0,0};
 unsigned char msk_type_unicast[ETH_ALEN] =   {1,0,0,0,0,0};
 unsigned char mac_type_multicast[ETH_ALEN] = {1,0,0,0,0,0};
